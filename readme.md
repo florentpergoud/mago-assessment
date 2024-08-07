@@ -16,6 +16,7 @@ You need to be able to:
 
 ## 💡 Precisions
 
+- You can clone the project and push your code on a public repo that you can share with us at the end of the exercise
 - We don’t have any design ready. You need to make it look as good as possible in the given timeframe
 - You need to embrace a pragmatic mindset.
 
