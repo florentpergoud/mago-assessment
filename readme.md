@@ -54,3 +54,4 @@ open http://localhost:3000
 - If you want to add anything to the project, feel free to add your touch! 💅
 - You can access your DB content by running the command `npx prisma studio`
 - You have access to the assets in the `public/assets/images` folder.
+- The loader gif is in `public/assets/loader.gif`
