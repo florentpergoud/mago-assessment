@@ -12,13 +12,21 @@ You need to be able to:
 - select one project and display the associated thumbnails
 - upload a thumbnail into an existing project
 - delete a thumbnail
-- create tests
+- implement the design as much as possible
+- implement the tests
+
+## 💅 Design
+
+Here is the link to the figma file: [Mago - Thumbnails](https://www.figma.com/design/6D7yTLQqiGRDq7Fe5wE98O/Test?node-id=0-1&node-type=CANVAS&t=o0fTzTJEYkibcgoc-0).
+
+Make sure you have the password to access the file.
 
 ## 💡 Precisions
 
 - You can clone the project and push your code on a public repo that you can share with us at the end of the exercise
 - We don’t have any design ready. You need to make it look as good as possible in the given timeframe
 - You need to embrace a pragmatic mindset.
+- The password to access the figma file will be given to you by our team.
 
 ## 🏁 Getting Started
 
