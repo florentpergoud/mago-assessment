@@ -24,9 +24,8 @@ Make sure you have the password to access the file.
 ## 💡 Precisions
 
 - You can clone the project and push your code on a public repo that you can share with us at the end of the exercise
-- We don’t have any design ready. You need to make it look as good as possible in the given timeframe
-- You need to embrace a pragmatic mindset.
-- The password to access the figma file will be given to you by our team.
+- The password to access the figma file will be given to you by our team
+- You need to embrace a pragmatic mindset
 
 ## 🏁 Getting Started
 
@@ -54,3 +53,4 @@ open http://localhost:3000
 
 - If you want to add anything to the project, feel free to add your touch! 💅
 - You can access your DB content by running the command `npx prisma studio`
+- You have access to the assets in the `public/assets/images` folder.
