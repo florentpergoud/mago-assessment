@@ -16,14 +16,10 @@ export const logoContainer = style({
   paddingBlock: theme.spaces[3],
 });
 
-export const navLink = style({
+export const projectButton = style({
   paddingInline: theme.spaces[4],
   paddingBlock: theme.spaces[3],
   textDecoration: "none",
-  color: theme.colors.mainColors.primary,
-  selectors: {
-    "&[data-active='true']": {
-      backgroundColor: theme.colors.mainColors.primaryActive,
-    },
-  },
+  color: "theme.colors.mainColors.primary",
+  backgroundColor: theme.colors.neutralColors.background,
 });

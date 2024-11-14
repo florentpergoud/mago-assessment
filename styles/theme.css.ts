@@ -17,7 +17,8 @@ export const theme = createGlobalTheme(":root", {
     },
     mainColors: {
       primary: "#D1D1C9",
-      primaryActive: "#1A1A1A",
+      primaryActiveBackground: "#1A1A1A",
+      secondary: "#8F8F8F",
     },
   },
   linearGradients: {
