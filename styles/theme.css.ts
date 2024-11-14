@@ -13,7 +13,8 @@ globalFontFace("Lato", {
 export const theme = createGlobalTheme(":root", {
   colors: {
     neutralColors: {
-      background: "#0C0C0C",
+      background: "#030303",
+      menuBackground: "#0C0C0C",
     },
     mainColors: {
       primary: "#D1D1C9",

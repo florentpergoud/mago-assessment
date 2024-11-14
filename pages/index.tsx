@@ -6,14 +6,17 @@ import {
   pageContainer,
   projectListItem,
   projectListItemContent,
-  projectsContainer,
+  mainArea,
   projectsList,
   projectsListSideMenu,
+  selectedProjectContainer,
+  selectedProjectThumbnailContainer,
 } from "../styles/intex.css";
 import { NavBar } from "../components/nav-bar";
 import { SideMenu } from "../components/side-menu";
 import { useState } from "react";
 import { ThemeButton } from "../components/theme-button";
+import { ProjectThumbnailVisualizer } from "../components/project-assets-visualizer";
 
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await fetchProjects();
@@ -26,10 +29,12 @@ const Home = ({ projects }) => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
+  console.dir(selectedProject, { depth: null });
+
   return (
     <div className={pageContainer}>
       <NavBar onProjectPress={() => setIsSideMenuOpen(true)} />
-      <div className={projectsContainer}>
+      <div className={mainArea}>
         <SideMenu
           isOpen={isSideMenuOpen}
           onClose={() => setIsSideMenuOpen(false)}
@@ -64,6 +69,9 @@ const Home = ({ projects }) => {
             </div>
           </div>
         </SideMenu>
+        <div className={selectedProjectContainer}>
+          <ProjectThumbnailVisualizer project={selectedProject} />
+        </div>
       </div>
     </div>
   );

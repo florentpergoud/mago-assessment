@@ -10,7 +10,7 @@ export const pageContainer = style({
   width: "100vw",
 });
 
-export const projectsContainer = style({
+export const mainArea = style({
   width: "100%",
   flexGrow: 1,
   position: "relative",
@@ -22,6 +22,7 @@ export const projectsListSideMenu = style({
   alignItems: "flex-start",
   justifyContent: "flex-start",
   gap: theme.spaces[4],
+  height: "100%",
 });
 
 export const projectsList = style({
@@ -56,4 +57,21 @@ export const projectListItemContent = style({
       backgroundColor: theme.colors.mainColors.primaryActiveBackground,
     },
   },
+});
+
+export const selectedProjectContainer = style({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+});
+
+export const selectedProjectThumbnailContainer = style({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 });

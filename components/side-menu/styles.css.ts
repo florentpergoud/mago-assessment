@@ -11,6 +11,7 @@ export const sideMenuContainer = style({
   paddingBlock: theme.spaces[12],
   transform: "translateX(-100%)",
   transition: "transform 0.3s ease-in-out",
+  backgroundColor: theme.colors.neutralColors.menuBackground,
 });
 
 export const sideMenuContainerOpened = style([
@@ -22,8 +23,8 @@ export const sideMenuContainerOpened = style([
 
 export const closeButton = style({
   position: "absolute",
-  right: theme.spaces[1],
-  top: theme.spaces[2],
+  right: theme.spaces[3],
+  top: theme.spaces[3],
   width: theme.spaces[8],
   height: theme.spaces[8],
   display: "flex",
