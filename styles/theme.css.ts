@@ -13,22 +13,11 @@ globalFontFace("Lato", {
 export const theme = createGlobalTheme(":root", {
   colors: {
     neutralColors: {
-      white: "#FFFFFF",
-      white12: "#535353",
-      black: "#111315",
-      greyBackground: "#1D1F21",
-      greyText: "#C3C3C3",
-      disabledText: "#7D7D7D",
-      greyAction: "#3B3B3B",
-      greyCard: "#292929",
-      greyBorder: "#393A3C",
-    },
-    twitchColors: {
-      blue: "#02ADFF",
-      blue21: "#21B7FF",
+      background: "#0C0C0C",
     },
     mainColors: {
-      primary: "#FFBB55",
+      primary: "#D1D1C9",
+      primaryActive: "#1A1A1A",
     },
   },
   linearGradients: {
@@ -120,6 +109,6 @@ export const theme = createGlobalTheme(":root", {
 // Global styles
 
 globalStyle("body", {
-  backgroundColor: theme.colors.neutralColors.black,
+  backgroundColor: theme.colors.neutralColors.background,
   fontFamily: theme.fonts.main,
 });
