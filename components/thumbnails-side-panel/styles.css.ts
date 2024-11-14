@@ -15,6 +15,7 @@ export const panelHeader = style({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  color: theme.colors.mainColors.primary,
 });
 
 export const panelHeaderTitle = style({
@@ -34,4 +35,13 @@ export const thumbnailItem = style({
   height: "6rem",
   backgroundColor: theme.colors.mainColors.secondary,
   borderRadius: theme.radii.smallCorner,
+  overflow: "hidden",
+  selectors: {
+    "&[data-active]": {
+      border: `2px solid ${theme.colors.mainColors.actionSecondary}`,
+    },
+    "&:hover": {
+      border: `2px solid ${theme.colors.mainColors.primary}`,
+    },
+  },
 });

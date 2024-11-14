@@ -4,22 +4,25 @@ import {
   selectedThumbnailContainer,
   selectedThumbnailStyle,
 } from "./styles.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { getUrlForThumbnail } from "./get-url-for-thumbnail";
+import { getThumbnailUrl } from "./get-thumbnail-url";
 import { ThumbnailsSidePanel } from "../thumbnails-side-panel";
 
 interface Props {
-  project: Project & { thumbnails: Thumbnail[] };
+  thumbnails: Thumbnail[];
+  projectId: number;
 }
 
-export const ProjectThumbnailVisualizer = ({ project }: Props) => {
+export const ProjectThumbnailVisualizer = ({
+  thumbnails,
+  projectId,
+}: Props) => {
   const [selectedThumbnail, setSelectedThumbnail] = useState<Thumbnail | null>(
-    project.thumbnails[0]
+    thumbnails[0]
   );
 
-  const selectedThumbnailUrl = getUrlForThumbnail(selectedThumbnail?.filename);
-  console.log(selectedThumbnailUrl);
+  const selectedThumbnailUrl = getThumbnailUrl(selectedThumbnail?.filename);
 
   return (
     <div className={container}>
@@ -33,9 +36,10 @@ export const ProjectThumbnailVisualizer = ({ project }: Props) => {
         />
       </div>
       <ThumbnailsSidePanel
-        thumbnails={project.thumbnails}
+        thumbnails={thumbnails}
         selectedThumbnail={selectedThumbnail}
         onThumbnailPress={setSelectedThumbnail}
+        projectId={projectId}
       />
     </div>
   );

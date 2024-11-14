@@ -17,6 +17,7 @@ import { SideMenu } from "../components/side-menu";
 import { useState } from "react";
 import { ThemeButton } from "../components/theme-button";
 import { ProjectThumbnailVisualizer } from "../components/project-assets-visualizer";
+import { Project, Thumbnail } from "@prisma/client";
 
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await fetchProjects();
@@ -27,7 +28,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home = ({ projects }) => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
-  const [selectedProject, setSelectedProject] = useState(projects[0]);
+  const [selectedProject, setSelectedProject] = useState<
+    Project & { thumbnails: Thumbnail[] }
+  >(projects[0]);
 
   console.dir(selectedProject, { depth: null });
 
@@ -70,7 +73,10 @@ const Home = ({ projects }) => {
           </div>
         </SideMenu>
         <div className={selectedProjectContainer}>
-          <ProjectThumbnailVisualizer project={selectedProject} />
+          <ProjectThumbnailVisualizer
+            thumbnails={selectedProject.thumbnails}
+            projectId={selectedProject.id}
+          />
         </div>
       </div>
     </div>

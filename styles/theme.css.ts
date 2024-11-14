@@ -20,6 +20,7 @@ export const theme = createGlobalTheme(":root", {
       primary: "#D1D1C9",
       primaryActiveBackground: "#1A1A1A",
       secondary: "#8F8F8F",
+      actionSecondary: "#A6C018",
     },
   },
   linearGradients: {

@@ -7,33 +7,36 @@ import {
   thumbnailsList,
 } from "./styles.css";
 import { ThemeButton } from "../theme-button";
+import { DeletableThumbnail } from "../deletable-thumbnail";
 
 interface Props {
   thumbnails: Thumbnail[];
   selectedThumbnail: Thumbnail | null;
   onThumbnailPress: (thumbnail: Thumbnail) => void;
+  projectId: number;
 }
 
 export const ThumbnailsSidePanel = ({
   thumbnails,
   selectedThumbnail,
   onThumbnailPress,
+  projectId,
 }: Props) => {
   return (
     <div className={container}>
       <div className={panelHeader}>
         <h2 className={panelHeaderTitle}>Assets</h2>
+        <ThemeButton>+</ThemeButton>
       </div>
       <div className={thumbnailsList}>
         {thumbnails.map((thumbnail) => (
-          <ThemeButton
+          <div
             key={thumbnail.id}
             className={thumbnailItem}
             data-active={selectedThumbnail?.id === thumbnail.id}
-            onPress={() => onThumbnailPress(thumbnail)}
           >
-            {thumbnail.filename}
-          </ThemeButton>
+            <DeletableThumbnail thumbnail={thumbnail} />
+          </div>
         ))}
       </div>
     </div>
